@@ -1,0 +1,107 @@
+<!-- <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>CPF</mat-label>
+    <input matInput>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Data de nascimento</mat-label>
+    <input matInput>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>Genero</mat-label>
+    <mat-select>
+        <mat-option value="one">Masculino</mat-option>
+        <mat-option value="two">Feminino</mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>email</mat-label>
+    <input matInput>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>cep</mat-label>
+    <input matInput>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>curso</mat-label>
+    <input matInput>
+</mat-form-field> -->
+
+
+<form [formGroup]="formulario" (ngSubmit)="create()">
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput formControlName="dataNascimento">
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-form-field">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [matDatepicker]="datepicker">
+        
+        <mat-datepicker-toggle matIconSuffix [for]="datepicker" [(ngModel)]="selectedDate"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+            <mat-datepicker-actions>
+                <button mat-button matDatepickerCancel>Cancel</button>
+                <button mat-raised-button color="primary" matDatepickerApply>Aplicar</button>
+            </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field> -->
+
+    <mat-form-field>
+        <mat-label>Gênero</mat-label>
+        <mat-select formControlName="genero">
+            <mat-option value="Masculino">Masculino</mat-option>
+            <mat-option value="Feminino">Feminino</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field>
+        <mat-label>Curso</mat-label>
+        <mat-select formControlName="curso">
+            <mat-option value="RDS8">Redes de Computadores e Sistemas Distribuídos</mat-option>
+            <mat-option value="SEC6">Segurança Cibernética</mat-option>
+            <mat-option value="ADS6">Análise e Desenvolvimento de Sistemas</mat-option>
+            <mat-option value="MBI6">Business Intelligence e Mineração de Dados</mat-option>
+            <mat-option value="GDTI6">Gestão da Tecnologia da Informação</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+    </mat-form-field>
+
+    <!-- <mat-form-field>
+        <mat-label>CEP</mat-label>
+        <input matInput formControlName="cep">
+    </mat-form-field> -->
+
+
+
+
+    <button mat-raised-button color="primary" type="submit">Criar</button>
+</form>
+
+
+<!-- <mat-form-field>
+    <mat-label>Textarea</mat-label>
+    <textarea matInput></textarea>
+</mat-form-field> -->
+
+

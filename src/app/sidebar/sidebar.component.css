@@ -1,0 +1,29 @@
+.top-menu {
+    background-color: black;
+    padding: 8px;
+}
+
+.top-menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.menu-item a:hover {
+    background-color: gray;
+}
+
+.menu-item a.active {
+    font-weight: bold;
+}
