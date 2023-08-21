@@ -1,130 +1,27 @@
-<!-- <nav class="sidebar">
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/dashboard">
-                <i class="bi bi-speedometer2"></i> Dashboard
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/users">
-                <i class="bi bi-people"></i> Usuários
-            </a>
-        </li>
-     
-    </ul>
-</nav> -->
-<!-- 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Menu</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item p-2">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item p-2">
-                    <a class="nav-link" routerLink="/alunos/cadastro">Cadastro de alunos</a>
-                </li>
-                <li class="nav-item p-2">
-                    <a class="nav-link" routerLink="">Cursos</a>
-                </li>
-                <li class="nav-item p-2">
-                    <a class="nav-link" routerLink="">Alunos por curso</a>
-                </li>
-                <li class="nav-item p-2">
-                    <a class="nav-link" routerLink="/notas" routerLinkActive="active">Notas</a>
-                </li>
-                <li class="nav-item p-2">
-                    <a class="nav-link " routerLink="/grade" routerLinkActive="active">Grade curricular por disciplina</a>
-                </li>
 
 
-            </ul>
-           
-        </div>
-    </div>
-</nav> -->
-
-
-
-
-<button mat-button [matMenuTriggerFor]="aboveMenu">Alunos</button>
+<button mat-button [matMenuTriggerFor]="aboveMenu">Analises</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
-    <button mat-menu-item routerLink="/alunos/cadastro">Cadastro de alunos</button>
-    <button mat-menu-item>Alunos por curso</button>
+    <button mat-menu-item routerLink="/analise-descritiva">Análise Descritiva das Vendas</button>
+    <button mat-menu-item routerLink="/serie-temporal">Análise da Série Temporal das Vendas</button>
 </mat-menu>
 
 
-<!-- <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
-<mat-menu #animals="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Lista Cursos</button>
-    <button mat-menu-item >Invertebrates</button>
-</mat-menu>
-<mat-menu #vertebrates="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-    <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-    <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-    <button mat-menu-item>Birds</button>
-    <button mat-menu-item>Mammals</button>
-</mat-menu>
-<mat-menu #fish="matMenu">
-    <button mat-menu-item>Baikal oilfish</button>
-    <button mat-menu-item>Bala shark</button>
-    <button mat-menu-item>Ballan wrasse</button>
-    <button mat-menu-item>Bamboo shark</button>
-    <button mat-menu-item>Banded killifish</button>
-</mat-menu>
 
-<mat-menu #amphibians="matMenu">
-    <button mat-menu-item>Sonoran desert toad</button>
-    <button mat-menu-item>Western toad</button>
-    <button mat-menu-item>Arroyo toad</button>
-    <button mat-menu-item>Yosemite toad</button>
-</mat-menu>
-
-<mat-menu #reptiles="matMenu">
-    <button mat-menu-item>Banded Day Gecko</button>
-    <button mat-menu-item>Banded Gila Monster</button>
-    <button mat-menu-item>Black Tree Monitor</button>
-    <button mat-menu-item>Blue Spiny Lizard</button>
-    <button mat-menu-item disabled>Velociraptor</button>
-</mat-menu> -->
-
-<button mat-button [matMenuTriggerFor]="belowMenu">Cursos</button>
+<button mat-button [matMenuTriggerFor]="belowMenu">Dados</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item routerLink="/cursos/lista">Lista de Cursos</button>
-    <button mat-menu-item routerLink="/cursos/grade">Grade Curricular</button>
+    <button mat-menu-item routerLink="/cursos/lista">Vendas</button>
+    <button mat-menu-item routerLink="/cursos/grade">Produtos</button>
 </mat-menu>
 
 
-<!-- <mat-menu>
-    <button mat-button [matMenuTriggerFor]="beforeMenu">Notas e Médias</button>
-</mat-menu> -->
-
-<button mat-button [matMenuTriggerFor]="animals">Notas</button>
-<mat-menu #animals="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="cursos"> Cursos</button>
-    
-</mat-menu>
-
-<mat-menu #cursos="matMenu" xPosition="before">
-    <button mat-menu-item routerLink="/notas/rds">Redes de Computadores e Sistemas Distribuídos</button>
-    <button mat-menu-item routerLink="/notas/sec">Segurança Cibernética</button>
-    <button mat-menu-item routerLink="/notas/ads">Análise e Desenvolvimento de Sistemas</button>
-    <button mat-menu-item routerLink="/notas/mbi">Business Intelligence e Mineração de Dados</button>
-    <button mat-menu-item routerLink="/notas/gdti">Gestão da Tecnologia da Informação</button>  
-    
-</mat-menu>
 
 
-<button mat-button [matMenuTriggerFor]="afterMenu">Aulas</button>
+
+<button mat-button [matMenuTriggerFor]="afterMenu">Notas</button>
 <mat-menu #afterMenu="matMenu" xPosition="after">
-    <button mat-menu-item routerLink="/calendario">Calendario de Aulas</button>
-    <button mat-menu-item>Item 2</button>
+    <button mat-menu-item routerLink="/calendario">Sobre os dados</button>
+    <button mat-menu-item>Ferramentas</button>
 </mat-menu>
 
 

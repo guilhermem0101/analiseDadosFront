@@ -31,6 +31,8 @@ import { AdsComponent } from './funcionalidades/notas-curso/ads/ads.component';
 import { MbiComponent } from './funcionalidades/notas-curso/mbi/mbi.component';
 import { GdtiComponent } from './funcionalidades/notas-curso/gdti/gdti.component';
 import { CalendarioComponent } from './calendario/calendario.component';
+import { AnaliseDescritivaComponent } from './analise-descritiva/analise-descritiva.component';
+import { SerieTemporalComponent } from './serie-temporal/serie-temporal.component';
 
 
 
@@ -55,7 +57,9 @@ import { CalendarioComponent } from './calendario/calendario.component';
     AdsComponent,
     MbiComponent,
     GdtiComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    AnaliseDescritivaComponent,
+    SerieTemporalComponent
   ],
   imports: [
     BrowserModule,

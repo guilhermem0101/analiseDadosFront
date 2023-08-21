@@ -13,22 +13,17 @@ import { MbiComponent } from './funcionalidades/notas-curso/mbi/mbi.component';
 import { RdsComponent } from './funcionalidades/notas-curso/rds/rds.component';
 import { SecComponent } from './funcionalidades/notas-curso/sec/sec.component';
 import { CalendarioComponent } from './calendario/calendario.component';
+import { AnaliseDescritivaComponent } from './analise-descritiva/analise-descritiva.component';
+import { SerieTemporalComponent } from './serie-temporal/serie-temporal.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/alunos', pathMatch: 'full' }, // Rota padrão
+  { path: '', redirectTo: '/analise-descritiva', pathMatch: 'full' }, // Rota padrão
   { path: 'alunos', component: UserListComponent }, // Rota para listagem de usuários
   { path: 'alunos/cadastro', component: UserCreateComponent }, // Rota para cadastro de usuário
   { path: 'alunos/edit/:id', component: UserEditComponent }, // Rota para edição de usuário com parâmetro ID
-  { path: 'calendario', component: CalendarioComponent },
-  { path: 'cursos/grade', component: GradeCurricularComponent },
-  { path: 'cursos/lista', component: ListaCursosComponent },
-  { path: 'lista', component: ListaDiscpComponent },
-  { path: 'notas/ads', component: AdsComponent },
-  { path: 'notas/gdti', component: GdtiComponent },
-  { path: 'notas/mbi', component: MbiComponent },
-  { path: 'notas/rds', component: RdsComponent },
-  { path: 'notas/sec', component: SecComponent },
+  { path: 'analise-descritiva', component: AnaliseDescritivaComponent }, 
+  { path: 'serie-temporal', component: SerieTemporalComponent },
 
 ];
 
