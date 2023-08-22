@@ -17,22 +17,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { GradeCurricularComponent } from './funcionalidades/grade-curricular/grade-curricular.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import { NotasComponent } from './funcionalidades/notas-curso/notas.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { ListaCursosComponent } from './funcionalidades/lista-cursos/lista-cursos.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ListaDiscpComponent } from './funcionalidades/lista-discp/lista-discp.component';
-import { RdsComponent } from './funcionalidades/notas-curso/rds/rds.component';
-import { SecComponent } from './funcionalidades/notas-curso/sec/sec.component';
-import { AdsComponent } from './funcionalidades/notas-curso/ads/ads.component';
-import { MbiComponent } from './funcionalidades/notas-curso/mbi/mbi.component';
-import { GdtiComponent } from './funcionalidades/notas-curso/gdti/gdti.component';
-import { CalendarioComponent } from './calendario/calendario.component';
+import { MatCardModule } from '@angular/material/card';
+
+
 import { AnaliseDescritivaComponent } from './analise-descritiva/analise-descritiva.component';
 import { SerieTemporalComponent } from './serie-temporal/serie-temporal.component';
+import { VendasComponent } from './vendas/vendas.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { FerramentasComponent } from './ferramentas/ferramentas.component';
+import { InfoComponent } from './info/info.component';
 
 
 
@@ -47,19 +44,13 @@ import { SerieTemporalComponent } from './serie-temporal/serie-temporal.componen
     UserListComponent,
     UserCreateComponent,
     UserEditComponent,
-    SidebarComponent,
-    GradeCurricularComponent,
-    NotasComponent,
-    ListaCursosComponent,
-    ListaDiscpComponent,
-    RdsComponent,
-    SecComponent,
-    AdsComponent,
-    MbiComponent,
-    GdtiComponent,
-    CalendarioComponent,
+    SidebarComponent,   
     AnaliseDescritivaComponent,
-    SerieTemporalComponent
+    SerieTemporalComponent,
+    VendasComponent,
+    ProdutosComponent,
+    FerramentasComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -79,6 +70,7 @@ import { SerieTemporalComponent } from './serie-temporal/serie-temporal.componen
     MatMenuModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatCardModule
 
   ],
   providers: [],

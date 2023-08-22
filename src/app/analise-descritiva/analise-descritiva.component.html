@@ -1,5 +1,5 @@
 <br>
-<mat-form-field>
+<!-- <mat-form-field>
     <mat-label>Enter a date range</mat-label>
     <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
         <input matStartDate formControlName="start" placeholder="Start date">
@@ -15,34 +15,28 @@
 
 
 <button mat-raised-button color="primary" type="submit" (click)="submitDates()">Filtrar</button>
-
+ -->
 
 
 <div class="row">
 
-    <img [src]="vendasByProduto" alt="Série Temporal de Vendas" style="width: 50%;">
-    <img [src]="vendasBySales" alt="Série Temporal de Vendas" style="width: 50%;">
+    <img [src]="vendasByProduto" alt="Produtos com mais vendas" style="width: 50%;">
+    <img [src]="vendasBySales" alt="Produtos com mais arrecadação" style="width: 50%;">
 </div>
 
 
 <div class="row">
     <div class="col-xxl-12">
-        <img [src]="vendasByProduto" alt="Série Temporal de Vendas" style="width: 50%;">
-        <img [src]="vendasByCity" alt="Série Temporal de Vendas" style="width: 50%;">
+        <img [src]="histogramaProdutos" alt="histopgramas de pedidos compostos" style="width: 50%;">
+        <img [src]="vendasByCity" alt="cidades com mais vendas" style="width: 50%;">
     </div>
 </div>
 
 <div class="row">
     <div class="col-xxl-12">
 
-        <img [src]="vendasByHorario" alt="Série Temporal de Vendas" style="width: 100%;">
+        <img [src]="vendasByHorario" alt="distribuição de pedidos por horario" style="width: 100%;">
         
     </div>
 </div>
 
-<div class="row">
-    <div class="col-xxl-12">
-        
-
-    </div>
-</div>

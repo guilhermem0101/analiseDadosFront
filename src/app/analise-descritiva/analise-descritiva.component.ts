@@ -15,6 +15,7 @@ export class AnaliseDescritivaComponent {
   vendasBySales: string = this.api + "/vendas-por-produto"
   vendasByHorario: string = this.api + "/vendas-por-horario"
   vendasByValor: string = this.api + "/vendas-por-valor"
+  histogramaProdutos: string = this.api + "/histograma-de-produtos"
   selectedMinDate!: Date;
   selectedMaxDate!: Date;
   formatdataMin!: string;

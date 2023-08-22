@@ -9,10 +9,11 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class SerieTemporalComponent {
   api: string = "https://flask-production-9397.up.railway.app"
   period: string = 'W';
-  serieUrl: string = this.api + "/vendas-serie?periodo=" + this.period;
+  serieArrecadacao: string = this.api + "/vendas-serie?periodo=" + this.period;
+  serieOrdens: string = this.api + "/ordens-serie?periodo=" + this.period;
   formatdataMin!: string;
   formatdataMax!: string;
-  periodForm!: FormGroup;
+  selectedValue!: string; 
   minDate = new Date(2019, 0, 1);  // January 1, 2019
   maxDate = new Date(2019, 11, 31);  // December 31, 2019
   periodos: any[] = [
@@ -26,9 +27,7 @@ export class SerieTemporalComponent {
     end: new FormControl<Date | null>(null),
   });
 
-  get selectedPeriod() {
-    return this.periodForm.get('selectedPeriod');
-  }
+
 
   getSelectedDateRange() {
     const startValue = this.range.get('start')?.value;
@@ -47,16 +46,21 @@ export class SerieTemporalComponent {
       const day = ("0" + date.getDate()).slice(-2);
       return `${year}-${month}-${day}`;
     }
-    if (this.selectedPeriod) {
-      this.period = this.selectedPeriod.value.toString();
-    } else {}
-    console.log(this.period);
-    
-    this.formatdataMin = formatDate(this.getSelectedDateRange().start)
-    this.formatdataMax = formatDate(this.getSelectedDateRange().end)
 
-
-    this.serieUrl = "https://flask-production-9397.up.railway.app/vendas-serie?periodo=" + this.period + "&data_inicial=" + this.formatdataMin + "&data_final=" + this.formatdataMax
     
+
+    this.period=this.selectedValue
+    
+
+    if (!this.formatdataMin || !this.formatdataMax) {
+      this.serieArrecadacao = "https://flask-production-9397.up.railway.app/vendas-serie?periodo=" + this.period
+      this.serieOrdens = "https://flask-production-9397.up.railway.app/ordens-serie?periodo=" + this.period
+    } else {
+      this.formatdataMin = formatDate(this.getSelectedDateRange().start)
+      this.formatdataMax = formatDate(this.getSelectedDateRange().end)
+      this.serieArrecadacao = "https://flask-production-9397.up.railway.app/vendas-serie?periodo=" + this.period + "&data_inicial=" + this.formatdataMin + "&data_final=" + this.formatdataMax;
+      this.serieOrdens = "https://flask-production-9397.up.railway.app/ordens-serie?periodo=" + this.period + "&data_inicial=" + this.formatdataMin + "&data_final=" + this.formatdataMax;
+    }
+
   }
 }

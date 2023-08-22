@@ -3,18 +3,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserListComponent } from './alunos/user-list/user-list.component';
 import { UserCreateComponent } from './alunos/user-create/user-create.component';
-import { NotasComponent } from './funcionalidades/notas-curso/notas.component';
-import { GradeCurricularComponent } from './funcionalidades/grade-curricular/grade-curricular.component';
-import { ListaCursosComponent } from './funcionalidades/lista-cursos/lista-cursos.component';
-import { ListaDiscpComponent } from './funcionalidades/lista-discp/lista-discp.component';
-import { AdsComponent } from './funcionalidades/notas-curso/ads/ads.component';
-import { GdtiComponent } from './funcionalidades/notas-curso/gdti/gdti.component';
-import { MbiComponent } from './funcionalidades/notas-curso/mbi/mbi.component';
-import { RdsComponent } from './funcionalidades/notas-curso/rds/rds.component';
-import { SecComponent } from './funcionalidades/notas-curso/sec/sec.component';
-import { CalendarioComponent } from './calendario/calendario.component';
+
+
 import { AnaliseDescritivaComponent } from './analise-descritiva/analise-descritiva.component';
 import { SerieTemporalComponent } from './serie-temporal/serie-temporal.component';
+import { VendasComponent } from './vendas/vendas.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { InfoComponent } from './info/info.component';
+import { FerramentasComponent } from './ferramentas/ferramentas.component';
 
 
 const routes: Routes = [
@@ -24,7 +20,10 @@ const routes: Routes = [
   { path: 'alunos/edit/:id', component: UserEditComponent }, // Rota para edição de usuário com parâmetro ID
   { path: 'analise-descritiva', component: AnaliseDescritivaComponent }, 
   { path: 'serie-temporal', component: SerieTemporalComponent },
-
+  { path: 'vendas', component: VendasComponent },
+  { path: 'produtos', component: ProdutosComponent },
+  { path: 'info-dados', component: InfoComponent },
+  { path: 'info-ferramentas', component: FerramentasComponent },
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class FuncionalidadesService {
 
-  private apiUrl = 'http://127.0.0.1:5000'; // URL da API de usuários
+  private apiUrl = 'https://flask-production-9397.up.railway.app'; // URL da API de usuários
 
   constructor(private http: HttpClient) { }
 
@@ -16,8 +16,12 @@ export class FuncionalidadesService {
   }
 
 
-  getCursos(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}${'/cursos'}`);
+  getVendas(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}${'/vendas'}`);
+  }
+
+  getProdutos(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}${'/produtos'}`);
   }
 
   getDisciplinas(cod_curso: string): Observable<any[]> {

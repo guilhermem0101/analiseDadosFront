@@ -10,18 +10,18 @@
 
 <button mat-button [matMenuTriggerFor]="belowMenu">Dados</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item routerLink="/cursos/lista">Vendas</button>
-    <button mat-menu-item routerLink="/cursos/grade">Produtos</button>
+    <button mat-menu-item routerLink="/vendas">Vendas</button>
+    <button mat-menu-item routerLink="/produtos">Produtos</button>
 </mat-menu>
 
 
 
 
 
-<button mat-button [matMenuTriggerFor]="afterMenu">Notas</button>
+<button mat-button [matMenuTriggerFor]="afterMenu">Informações</button>
 <mat-menu #afterMenu="matMenu" xPosition="after">
-    <button mat-menu-item routerLink="/calendario">Sobre os dados</button>
-    <button mat-menu-item>Ferramentas</button>
+    <button mat-menu-item routerLink="/info-dados">Sobre os dados</button>
+    <button mat-menu-item routerLink="/info-ferramentas">Ferramentas</button>
 </mat-menu>
 
 

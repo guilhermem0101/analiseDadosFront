@@ -1,0 +1,36 @@
+<table mat-table [dataSource]="listaVendas" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Order">
+        <th mat-header-cell *matHeaderCellDef> Data e Hora </th>
+        <td mat-cell *matCellDef="let element"> {{element.Order}} </td>
+    </ng-container>
+
+ 
+    <ng-container matColumnDef="Product">
+        <th mat-header-cell *matHeaderCellDef> Produto </th>
+        <td mat-cell *matCellDef="let element"> {{element.Product}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Quantity">
+        <th mat-header-cell *matHeaderCellDef> Qantidade </th>
+        <td mat-cell *matCellDef="let element"> {{element.Quantity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef> Endereço de Envio </th>
+        <td mat-cell *matCellDef="let element"> {{element.Address}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Sales">
+        <th mat-header-cell *matHeaderCellDef> Total da compra </th>
+        <td mat-cell *matCellDef="let element"> {{element.Sales}} </td>
+    </ng-container>
+
+
+    
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
