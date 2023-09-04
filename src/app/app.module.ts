@@ -30,6 +30,8 @@ import { VendasComponent } from './vendas/vendas.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { FerramentasComponent } from './ferramentas/ferramentas.component';
 import { InfoComponent } from './info/info.component';
+import { SidebartoComponent } from './sidebarto/sidebarto.component';
+
 
 
 
@@ -50,7 +52,9 @@ import { InfoComponent } from './info/info.component';
     VendasComponent,
     ProdutosComponent,
     FerramentasComponent,
-    InfoComponent
+    InfoComponent,
+    SidebartoComponent,
+    
   ],
   imports: [
     BrowserModule,

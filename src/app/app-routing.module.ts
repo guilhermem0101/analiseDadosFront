@@ -11,6 +11,7 @@ import { VendasComponent } from './vendas/vendas.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { InfoComponent } from './info/info.component';
 import { FerramentasComponent } from './ferramentas/ferramentas.component';
+import { SidebartoComponent } from './sidebarto/sidebarto.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'produtos', component: ProdutosComponent },
   { path: 'info-dados', component: InfoComponent },
   { path: 'info-ferramentas', component: FerramentasComponent },
+  { path: 'sidebar', component: SidebartoComponent },
 ];
 
 @NgModule({

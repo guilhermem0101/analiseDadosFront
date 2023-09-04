@@ -1,26 +1,138 @@
 <br>
 
+<mat-card>
+    <mat-card-content>
+        
+        <h2><strong>Métricas</strong></h2>
+
+        <p style="font-size: 18px; text-align: center;">
+            Quando se trata do nível operacional da empresa, temos um conjunto de medidas quantitativas usadas para avaliar os
+            aspectos de desempenho da empresa.
+            As principais métricas para um modelo de negócio de Varejo seguem abaixo. As informações correspondem à base de dados da
+            Amazon de 20 produtos durante todo o ano de 2019
+
+
+        </p>
+    </mat-card-content>
+</mat-card>
 
 <mat-card>
     <mat-card-content>
+
         <div class="row">
-        
-            <img [src]="vendasByProduto" alt="Produtos com mais vendas" style="width: 50%;">
-            <img [src]="vendasBySales" alt="Produtos com mais arrecadação" style="width: 50%;">
+            <div class="col-md-6">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Produtos com mais vendas</mat-card-title>
+                        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                    </mat-card-header>
+                    <img mat-card-image img [src]="vendasByProduto" alt="Produtos com mais vendas"
+                       >
+                    <mat-card-content>
+                        <p style="font-size: 18px; text-align: center;">
+                            O gráfico mostra a quantidade de vezes em que cada produto foi vendido em 2019 e faz uma comparação. Perceba que os produtos mais vendidos são itens de baixo valor. 
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <!-- <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button> -->
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+
+
+            <div class="col-md-6">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Produtos com mais arrecadação</mat-card-title>
+                        <!-- <mat-card-subtitle></mat-card-subtitle> -->
+                    </mat-card-header>
+                    <img mat-card-image img [src]="vendasBySales" alt="Produtos com mais arrecadação">
+                    <mat-card-content>
+                        <p style="font-size: 18px; text-align: center;">
+                            O gráfico mostra a arrecadação total de cada produto em 2019. Note que os 5 primeiros produtos correspondem a +- 80% da arrecadação. Isso se relaciona com a regra Pareto 80/20.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <!-- <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button> -->
+                    </mat-card-actions>
+                </mat-card>
+            </div>
         </div>
-        
-        
+
+        <br>
         <div class="row">
-            <div class="col-xxl-12">
-                <img [src]="histogramaProdutos" alt="histopgramas de pedidos compostos" style="width: 50%;">
-                <img [src]="vendasByCity" alt="cidades com mais vendas" style="width: 50%;">
+            <div class="col-md-6">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Cidades com mais vendas</mat-card-title>
+                        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                    </mat-card-header>
+                    <img mat-card-image img [src]="vendasByCity" alt="cidades com mais vendas">
+                    <mat-card-content>
+                        <p style="font-size: 18px; text-align: center;">
+                            O gráfico mostra o quanto cada cidade nos EUA gerou de vendas durante o ano de 2019
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <!-- <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button> -->
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        
+        
+            <div class="col-md-6">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Pedidos compostos</mat-card-title>
+                        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                    </mat-card-header>
+                    <img mat-card-image img [src]="histogramaProdutos" alt="histogramas de pedidos compostos">
+                    <mat-card-content>
+                        <p style="font-size: 18px; text-align: center;">
+                           O gráfico mostra a porcentagem de pedidos com 1 ou mais itens no carrinho de compra. Perceba que 96% das vendas só possuem um unico pedido.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <!-- <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button> -->
+                    </mat-card-actions>
+                </mat-card>
             </div>
         </div>
         
+
+
+
+        
         <div class="row">
             <div class="col-xxl-12">
         
-                <img [src]="vendasByHorario" alt="distribuição de pedidos por horario" style="width: 100%;">
+
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Distribuição de pedidos por horario</mat-card-title>
+                        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                    </mat-card-header>
+                    <img mat-card-image img [src]="vendasByHorario" alt="distribuição de pedidos por horario" style="width: 80%;">
+                    <mat-card-content>
+                        <p style="font-size: 18px; text-align: center;">
+                            O gráfico mostra a curva de quantidade de pedidos para cada horario do dia no acumulado de 2019. Perceba que os picos ocorrem entre 10h-13h e entre 18h-21h. Talvez sejam os melhores intervalos de tempo para direcionar propagandas ao longo do dia.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <!-- <button mat-button>LIKE</button>
+                                        <button mat-button>SHARE</button> -->
+                    </mat-card-actions>
+                </mat-card>
+                <!-- <img [src]="vendasByHorario" alt="distribuição de pedidos por horario" style="width: 100%;"> -->
         
             </div>
         </div>
